@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
-import { NavComponent } from "./nav/nav.component";
+import { NavComponent } from "./layouts/nav/nav.component";
 import { AccountService } from './services/account.service';
 import { User } from './models/user';
-import { HomeComponent } from "./home/home.component";
+import { HomeComponent } from "./layouts/home/home.component";
+import { FormsModule } from '@angular/forms';
 
 
 @Component({
@@ -13,7 +14,7 @@ import { HomeComponent } from "./home/home.component";
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [CommonModule, RouterOutlet, TooltipModule, NavComponent, HomeComponent]
+    imports: [CommonModule, RouterOutlet, TooltipModule, NavComponent, HomeComponent,RouterLink,FormsModule]
 })
 export class AppComponent implements OnInit {
   title = 'client';
