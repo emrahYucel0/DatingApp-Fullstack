@@ -28,6 +28,10 @@
         </ul>
       </ng-container>
 
+      <li class="nav-item">
+        <a class="nav-link text-white"  routerLink="/errors" routerLinkActive="active">Errors</a>
+      </li>
+
       <div class="dropdown" *ngIf="(accountService.currentUser$ | async) as user">
         <a class="btn btn-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
           Welcome {{user.username | titlecase}}
